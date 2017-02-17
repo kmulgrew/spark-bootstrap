@@ -14,8 +14,8 @@ public class WordCountTask {
    private static final Logger LOGGER = LoggerFactory.getLogger(WordCountTask.class);
 
    public static void main(String[] args) {
-      checkArgument(args.length > 1, "Please provide the path of input file as first parameter.");
-      new WordCountTask().run(args[1]);
+      checkArgument(args.length >= 1, "Please provide the path of input file as first parameter.");
+      new WordCountTask().run(args[0]);
    }
 
    public void run(String inputFilePath) {
@@ -32,5 +32,6 @@ public class WordCountTask {
              .reduceByKey((a, b) -> a + b)
              .foreach(result -> LOGGER.info(
                    String.format("Word [%s] count [%d].", result._1(), result._2)));
+
    }
 }
