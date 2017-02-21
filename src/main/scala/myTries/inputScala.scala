@@ -1,5 +1,6 @@
 package myTries
 
+
 import org.apache.spark.sql.SparkSession
 
 object inputScala {
