@@ -14,7 +14,7 @@ public class WordCountTask {
    private static final Logger LOGGER = LoggerFactory.getLogger(WordCountTask.class);
 
    public static void main(String[] args) {
-      checkArgument(args.length >= 1, "Please provide the path of input file as first parameter.");
+      checkArgument(args.length >= 1, "Please provide the path of inputJava file as first parameter.");
       new WordCountTask().run(args[0]);
    }
 
