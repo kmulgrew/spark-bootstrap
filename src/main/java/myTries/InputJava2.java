@@ -23,7 +23,7 @@ public class InputJava2
       String[] inputFolderArray  = new String[args.length-1];
 
       for(int i = 0; i<args.length-1;i++) {
-         System.out.println(args[i]);
+         //System.out.println(args[i]);
          inputFolderArray[i] = args[i];
       }
 
