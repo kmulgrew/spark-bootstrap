@@ -20,13 +20,15 @@ public class InputJava2
       long startTime = System.nanoTime();
 
 
-      String[] inputFolderArray  = new String[args.length];
+      String[] inputFolderArray  = new String[args.length-1];
 
-      for(int i = 0; i<args.length;i++) {
+      for(int i = 0; i<args.length-1;i++) {
+         System.out.println(args[i]);
          inputFolderArray[i] = args[i];
       }
 
-
+      String regex = args[args.length-1]; //"/[wkd]ing";//a
+      //System.out.println(regex);
       String master = "local[*]";
 
       SparkConf conf = new SparkConf()
@@ -35,7 +37,7 @@ public class InputJava2
       JavaSparkContext sc = new JavaSparkContext(conf);
       JavaRDD<String> input = sc.emptyRDD();
       for(int i = 0; i<inputFolderArray.length; i++) {
-         JavaRDD<String> input2 = sc.textFile(inputFolderArray[i] + "/[wkd]ing");
+         JavaRDD<String> input2 = sc.textFile(inputFolderArray[i] + regex); //"/[wkd]ing");
          input = input.union(input2);
       }
       JavaRDD<String> words = input.flatMap(line -> Arrays.asList(line.split(" ")).iterator());
