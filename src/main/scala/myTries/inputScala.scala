@@ -10,7 +10,7 @@ object inputScala {
 
     val spark = SparkSession
       .builder
-      .appName("inputJava").master("local")
+      .appName("inputScala").master("local")
       .getOrCreate()
     val file = args(0)
     val input = spark.sparkContext.textFile(file)
