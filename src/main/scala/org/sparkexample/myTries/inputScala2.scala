@@ -1,10 +1,10 @@
-package myTries
+package org.sparkexample.myTries
 
 
-import org.apache.spark.sql.SparkSession
+//import org.apache.spark.sql.SparkSession
 
 object inputScala2 {
-  def main(args: Array[String]) {
+  /*def main(args: Array[String]) {
     val t0 = System.nanoTime()
 
   //println(args(0))
@@ -35,4 +35,5 @@ object inputScala2 {
     val t1 = System.nanoTime()
     println("Elapsed time: " + (t1 - t0) + "ns")
   }
+  */
 }

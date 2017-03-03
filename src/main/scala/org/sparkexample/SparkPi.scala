@@ -2,11 +2,11 @@ package org.sparkexample
 
 import scala.math.random
 
-import org.apache.spark.sql.SparkSession
+//import org.apache.spark.sql.SparkSession
 
 /** Computes an approximation to pi */
 object SparkPi {
-  def main(args: Array[String]) {
+  /*def main(args: Array[String]) {
     val spark = SparkSession
       .builder
       .appName("Spark Pi").master("local")
@@ -21,4 +21,5 @@ object SparkPi {
     println("Pi is roughly " + 4.0 * count / (n - 1))
     spark.stop()
   }
+  */
 }

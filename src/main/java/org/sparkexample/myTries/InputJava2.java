@@ -1,22 +1,11 @@
-package myTries;
-
-import org.apache.spark.SparkConf;
-import org.apache.spark.api.java.JavaPairRDD;
-import org.apache.spark.api.java.JavaRDD;
-import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.api.java.function.Function2;
-import org.apache.spark.api.java.function.PairFunction;
-import org.sparkexample.WordCountTask;
-import scala.Tuple2;
-
-import java.util.Arrays;
+package org.sparkexample.myTries;
 
 /**
  * Created by andrew.addison on 2/21/17.
  */
 public class InputJava2
 {
-   public static void main(String[] args) {
+   /*public static void main(String[] args) {
       long startTime = System.nanoTime();
 
 
@@ -50,5 +39,5 @@ public class InputJava2
       System.out.println(duration);
 
    }
-
+*/
 }
