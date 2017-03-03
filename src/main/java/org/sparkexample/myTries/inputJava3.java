@@ -30,10 +30,14 @@ public class inputJava3
       System.out.println(Arrays.asList(args).toString());
 
       String[] inputFolderArray = new String[1];
-      inputFolderArray[0] = args[0];
+      inputFolderArray = new String[args.length-1];
+
+      for(int i=1; i<args.length-1; i++) {
+         inputFolderArray[i-1] = args[i];
+      }
 
 
-      String regex = args[1]; //"/[wkd]ing";//a
+      String regex = args[0]; //"/[wkd]ing";//a
       //System.out.println(regex);
 
       SparkConf conf = new SparkConf().setAppName(WordCountTask.class.getName());
